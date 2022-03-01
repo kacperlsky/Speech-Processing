@@ -1,0 +1,18 @@
+#N canvas -8 -8 1920 997 12;
+#X obj 50 12 inputs~;
+#X obj 50 162 VUMeters~;
+#X obj 50 462 Mixer~;
+#X obj 50 562 filtering~;
+#X obj 350 12 LFO~;
+#X obj 350 162 Tremolo~;
+#X obj 500 162 ringmodulation~;
+#X obj 350 342 FrequencyShifting~;
+#X obj 350 242 Delay~;
+#X obj 350 442 Reverberation~;
+#X obj 650 462 results~;
+#X obj 50 762 GraphicEqualiser~;
+#X obj 650 12 Vibrato~;
+#X obj 650 162 Flanger~;
+#X obj 650 742 Effects~;
+#X obj 650 362 Volume~;
+#X obj 350 612 Metronome~;

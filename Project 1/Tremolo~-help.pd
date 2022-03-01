@@ -1,0 +1,10 @@
+#N canvas 822 10 551 515 12;
+#X obj 5 14 Tremolo~;
+#X text 170 18 This abstraction relies on the LFO abstraction for this
+reason only the vradio ON/OFF can be set \, all the other parameters
+of the tremolo can be set using the LFO above. Technical: Inputs: -"r~
+filteroutput" for the main voice/file signal input -"r~ LFO" - provides
+the oscillator's output -"r depthoutput" - another LFO input with depth
+values -Outputs: "s~ tremolo" it outputs the processed by the tremolo
+signal;
+#X coords 0 515 1 514 350 200 0;

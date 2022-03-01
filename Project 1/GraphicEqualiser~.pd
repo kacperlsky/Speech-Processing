@@ -1,0 +1,160 @@
+#N canvas 766 404 771 363 10;
+#N canvas 966 151 455 494 fft-analysis 0;
+#X obj 15 71 *~;
+#X obj 15 13 inlet~;
+#X obj 15 102 rfft~;
+#X obj 30 43 tabreceive~ \$0-hann;
+#X obj 15 316 *~;
+#X obj 48 316 *~;
+#X obj 72 13 block~ 512 4;
+#X obj 82 171 tabreceive~ \$0-gain;
+#X obj 76 225 *~;
+#X obj 15 411 *~;
+#X obj 30 383 tabreceive~ \$0-hann;
+#X obj 71 280 /~ 768;
+#X obj 71 251 *~;
+#X obj 15 352 rifft~;
+#X obj 15 444 outlet~;
+#X obj 82 198 clip~ 0 1;
+#X text 156 42 <= window the incoming block;
+#X text 58 101 <= compute the FFT;
+#X text 209 170 <= get the gain profile;
+#X text 148 197 <= ignore values outside the range;
+#X text 104 237 <= quartic scaling for easy editing;
+#X text 119 279 <= normalise by 512 x 3/2;
+#X text 75 314 <= modify the real and imaginary amplitudes;
+#X text 62 350 <= compute the inverse FFT;
+#X text 159 382 <= window the result;
+#X text 157 11 <= blocks of 512 samples at intervals of 128;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 2 1 5 0;
+#X connect 3 0 0 1;
+#X connect 4 0 13 0;
+#X connect 5 0 13 1;
+#X connect 7 0 15 0;
+#X connect 8 0 12 0;
+#X connect 8 0 12 1;
+#X connect 9 0 14 0;
+#X connect 10 0 9 1;
+#X connect 11 0 4 1;
+#X connect 11 0 5 1;
+#X connect 12 0 11 0;
+#X connect 13 0 9 0;
+#X connect 15 0 8 0;
+#X connect 15 0 8 1;
+#X restore 28 237 pd fft-analysis;
+#X obj 529 237 s \$0-gain;
+#X obj 528 136 loadbang;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array \$0-gain 256 float 1;
+#A 0 0 0 0 0 0 0 0 0 0.612833 0.612833 0.612833 0.612833 0.629667 0.629667
+0.635278 0.640889 0.6465 0.657722 0.668944 0.680167 0.691389 0.702611
+0.713833 0.725056 0.736278 0.7475 0.758722 0.769944 0.781166 0.792389
+0.803611 0.814833 0.827458 0.840083 0.852708 0.865333 0.882166 0.882166
+0.882166 0.882166 0.915833 0.932666 0.932666 0.941083 0.949499 0.966333
+0.983166 0.983166 0.983166 0.999999 1.01122 1.02244 1.03367 1.04208
+1.0505 1.0505 1.0505 1.06733 1.06733 1.06733 1.06733 1.06733 1.06733
+1.06733 1.06733 1.06733 1.06733 1.06733 1.06733 1.0505 1.0505 1.04208
+1.03367 1.03367 1.01683 1.00842 0.999999 0.999999 0.999999 0.999999
+0.999999 0.983166 0.974749 0.966333 0.966333 0.966333 0.960722 0.955111
+0.9495 0.943888 0.938277 0.932666 0.92425 0.915833 0.911625 0.907416
+0.903208 0.899 0.893389 0.887777 0.882166 0.876555 0.870944 0.865333
+0.865333 0.865333 0.865333 0.865333 0.865333 0.865333 0.856916 0.831666
+0.831666 0.831666 0.831666 0.831666 0.814833 0.798 1.42083 1.43766
+1.4545 1.48816 1.48816 1.505 1.505 1.52183 1.52183 1.53866 1.53866
+1.53866 1.53866 1.53866 1.53866 1.53866 1.53866 1.53866 1.53866 1.52183
+1.505 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 255 -0.01 512 60 1;
+#X restore 67 42 graph;
+#X text 53 93 0;
+#X text 53 33 1;
+#X text 298 9 GAIN;
+#X text 64 103 0 Hz;
+#X text 548 105 22 KHz;
+#X obj 525 18 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113 -262144
+-1;
+#X text 547 16 <= RESET;
+#X text 214 23 (click and drag curve with mouse);
+#N canvas 984 211 412 287 Hann-window 0;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array \$0-hann 512 float 0;
+#X coords 0 1 511 0 200 120 1;
+#X restore 184 42 graph;
+#X msg 126 126 0;
+#X obj 20 175 osc~;
+#X obj 20 127 samplerate~;
+#X obj 20 198 *~ -0.5;
+#X obj 20 221 +~ 0.5;
+#X obj 12 246 tabwrite~ \$0-hann;
+#X text 170 34 1;
+#X text 163 152 0;
+#X text 179 165 0;
+#X obj 20 151 / 512;
+#X obj 12 104 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 249 15 Hann window;
+#X text 68 173 period 512;
+#X obj 12 9 loadbang;
+#X msg 34 42 \; pd dsp 1;
+#X text 365 168 511;
+#X connect 1 0 2 1;
+#X connect 2 0 4 0;
+#X connect 3 0 10 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 10 0 2 0;
+#X connect 11 0 3 0;
+#X connect 11 0 1 0;
+#X connect 11 0 6 0;
+#X connect 14 0 11 0;
+#X connect 14 0 15 0;
+#X restore 151 149 pd Hann-window;
+#X text 313 105 11 KHz;
+#X text 175 104 5.5 KHz;
+#X text 429 105 16.5 KHz;
+#X text 249 148 <= precompute Hanning window;
+#X text 131 180 <= scale the spectrum;
+#X obj 590 12 inlet;
+#X obj 531 184 f \$1;
+#X msg 529 209 const \$1;
+#X msg 530 158 0.9;
+#X obj 29 145 r~ filteroutput;
+#X obj 28 278 s~ graphequ;
+#X obj 6 11 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 201 219 select;
+#X msg 207 248 0;
+#X msg 272 265 1;
+#X msg 310 250 0;
+#X msg 371 250 1;
+#X obj 28 199 *~;
+#X obj 162 255 *~;
+#X text 23 11 OFF;
+#X text 23 26 ON;
+#X obj 331 201 loadbang;
+#X connect 0 0 23 0;
+#X connect 9 0 19 0;
+#X connect 18 0 9 0;
+#X connect 19 0 20 0;
+#X connect 20 0 1 0;
+#X connect 21 0 19 0;
+#X connect 22 0 30 0;
+#X connect 22 0 31 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 25 0 27 0;
+#X connect 25 1 28 0;
+#X connect 25 1 29 0;
+#X connect 26 0 30 1;
+#X connect 27 0 31 1;
+#X connect 28 0 31 1;
+#X connect 29 0 30 1;
+#X connect 30 0 0 0;
+#X connect 31 0 23 0;
+#X connect 34 0 24 0;
+#X coords 0 -1 1 1 600 120 2 0 0;

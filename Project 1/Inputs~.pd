@@ -1,0 +1,50 @@
+#N canvas 835 375 685 457 12;
+#X obj 302 207 adc~;
+#X obj 371 205 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -257985
+-1 -1 1;
+#X obj 427 114 select;
+#X obj 440 178 *~;
+#X msg 428 137 0;
+#X msg 539 150 1;
+#X text 302 205 Voice Off;
+#X text 308 220 Voice On;
+#X obj 117 197 bng 15 250 50 0 empty empty empty 17 7 0 10 -257985
+-1 -1;
+#X obj 113 280 openpanel;
+#X obj 108 334 readsf~;
+#X obj 119 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -257985
+-1 -1;
+#X msg 197 274 1;
+#X msg 112 307 open \$1;
+#X obj 451 324 s~ voiceoutput;
+#X obj 88 391 s~ fileoutput;
+#X text 301 180 Voice Input;
+#X text 114 173 File Input;
+#X text 137 195 choose file;
+#X text 142 221 play file;
+#X text 194 109 Main Controls;
+#X text 333 110 PD DSP;
+#X obj 335 136 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -257985
+-1 -1 0;
+#X obj 219 44 select;
+#X text 355 136 ON;
+#X text 354 150 OFF;
+#X msg 93 41 \; pd dsp 1 \;;
+#X msg 305 41 \; pd dsp 0 \;;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 1 5 0;
+#X connect 3 0 14 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 1;
+#X connect 8 0 9 0;
+#X connect 9 0 13 0;
+#X connect 10 0 15 0;
+#X connect 11 0 12 0;
+#X connect 12 0 10 0;
+#X connect 13 0 10 0;
+#X connect 22 0 23 0;
+#X connect 23 0 26 0;
+#X connect 23 1 27 0;
+#X coords 0 -1 1 1 300 150 2 100 100;

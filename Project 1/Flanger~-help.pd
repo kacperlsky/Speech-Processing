@@ -1,0 +1,6 @@
+#N canvas 0 50 621 449 12;
+#X obj 7 10 Flanger~;
+#X text 13 136 Technical: Inputs: "r~ vibrato" "r~ LFO" Outputs: "s~
+flanger" Thanks to the flanger module the combination of Low Frequency
+oscillator and delay can be set. LFO is manipulated through the LFO~
+module and the delay inside this module.;

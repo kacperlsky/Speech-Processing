@@ -1,0 +1,6 @@
+#N canvas 0 50 727 498 12;
+#X obj 9 10 Vibrato~;
+#X text 13 119 This module is used for the vibrato \, the Low Frequency
+Oscillator is manipulated through the LFO~ module and frequency shifting
+through the slider in this module. Technical: Inputs "r~ delay" "r~
+LFO" Outputs: "s~ vibrato";

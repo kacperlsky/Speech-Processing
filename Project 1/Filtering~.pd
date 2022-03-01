@@ -1,0 +1,52 @@
+#N canvas 716 214 839 598 12;
+#X obj 120 159 hsl 220 15 0 100 0 0 empty empty centre_frequency -2
+-8 0 10 -203904 -1 -1 12700 1;
+#X obj 119 198 hsl 220 15 0 1 0 0 empty empty Q -2 -8 0 10 -203904
+-1 -1 0 1;
+#X obj 118 237 hsl 220 15 0 10000 0 0 empty empty high-pass_cut-off_filter
+-2 -8 0 10 -204786 -1 -1 0 1;
+#X obj 118 274 hsl 220 15 0 10000 0 1 empty empty low-pass_cut-off_filter
+-2 -8 0 10 -261682 -1 -1 12700 1;
+#X text 214 112 Filtering;
+#X obj 33 229 hip~;
+#X obj 30 294 bp~;
+#X obj 32 114 lop~;
+#X floatatom 350 158 5 0 0 0 - - -;
+#X floatatom 350 196 5 0 0 0 - - -;
+#X floatatom 351 235 5 0 0 0 - - -;
+#X floatatom 352 271 5 0 0 0 - - -;
+#X obj 311 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113
+-1 -1;
+#X text 335 115 <=Reset;
+#X msg 223 42 10000;
+#X obj 20 42 r~ mixeroutput;
+#X obj 422 58 loadbang;
+#X msg 357 362 0;
+#X obj 34 397 s~ filteroutput;
+#X msg 322 37 100;
+#X msg 399 37 0;
+#X connect 0 0 8 0;
+#X connect 1 0 9 0;
+#X connect 2 0 10 0;
+#X connect 3 0 11 0;
+#X connect 5 0 6 0;
+#X connect 6 0 18 0;
+#X connect 7 0 5 0;
+#X connect 8 0 6 1;
+#X connect 9 0 6 2;
+#X connect 10 0 5 1;
+#X connect 11 0 7 1;
+#X connect 12 0 14 0;
+#X connect 12 0 17 0;
+#X connect 12 0 19 0;
+#X connect 12 0 20 0;
+#X connect 14 0 3 0;
+#X connect 15 0 7 0;
+#X connect 16 0 14 0;
+#X connect 16 0 17 0;
+#X connect 16 0 19 0;
+#X connect 16 0 20 0;
+#X connect 17 0 2 0;
+#X connect 19 0 0 0;
+#X connect 20 0 1 0;
+#X coords 0 -1 1 1 300 200 2 100 100;

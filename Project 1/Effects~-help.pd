@@ -1,0 +1,9 @@
+#N canvas 0 50 813 461 12;
+#X obj 13 22 Effects~;
+#X text 349 41 There are four effects to choose from. After clicking
+the button next to the coresponding label such effect will be applied.
+Technical: each bang has set specific numbers which are connected to
+it and senders which are after that going to transmit the signal to
+the receivers connected to the sound processing abstractions. For the
+proper working of effects please make sure to turn off all the sound
+processing abstractions before applying any of the effects;

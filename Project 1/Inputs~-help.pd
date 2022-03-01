@@ -1,0 +1,12 @@
+#N canvas 191 138 686 475 12;
+#X obj 10 9 Inputs~;
+#X text 18 177 This is the main component to control the whole[VoiceChanger]
+program;
+#X text 24 230 1 PD DSP please select "On" on the Vradio to turn on
+the audio in the Pure Data program 2 Voice Input this option allows
+to turn On or Off the input coming from the microphone 3 File input
+use the top bang button and wait for the window to be displayed \,
+next select the file you want to listen to. As the next step please
+press the "play file" button to listen to the selected file;
+#X text 321 23 Technical: -to use the inputs you can refer to voice
+input with "r~ voiceoutput" and for file input "r~ fileoutput";

@@ -1,0 +1,7 @@
+#N canvas 648 93 664 429 12;
+#X obj 9 13 Mixer~;
+#X text 18 142 Technical: inputs: -"r~ voiceoutput" for the voice input
+and "r~ fileoutput" for the file input -Output: -"s~ mixeroutput" after
+mixing the inputs in the particular ratio based on the Hslider it is
+added and output. reset - sets the ratio of inputs to 1:1;
+#X coords 0 429 1 428 240 100 0;

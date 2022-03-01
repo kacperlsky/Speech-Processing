@@ -1,0 +1,10 @@
+#N canvas 1164 173 572 752 12;
+#X obj 11 7 VUMeters~;
+#X text 29 335 Technical: -Inputs this VUMeters have one input for
+voice: "r~ voiceinput" and one for file input: "r~ fileinput" -Outputs
+there are no outputs in this abstraction;
+#X text 329 8 The VUMeters present the real time loudness for input
+A and B \, file and voice npts respectively. the number at the top
+present the lowest loudness registered for particular input while number
+at the bottom present the maximum loudness.;
+#X coords 0 752 1 751 200 250 0;

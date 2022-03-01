@@ -1,0 +1,8 @@
+#N canvas 292 186 886 723 12;
+#X obj 4 9 Reverberation~;
+#X text 324 17 Technical: -Inputs "r~ ringmod" - main input signal
+-Outputs: "s~ reverberation" - the output with processed reverberation
+signal. there are also 2 sliders responsible for the delay and feedback
+manipulation. Clicking reset button turns off the whole module and
+sets sliders to 0;
+#X coords 0 723 1 722 200 100 0;

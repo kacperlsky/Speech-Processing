@@ -1,0 +1,10 @@
+#N canvas 1018 214 677 471 12;
+#X obj 6 5 filtering~;
+#X text 332 16 Technical: Inputs: -"r~ mixeroutput" - it is directly
+connected to the mixer abstraction Outputs: -"s~ filteroutput" after
+the filters applied the signal is sent to the iutput;
+#X text 14 226 There are 3 filtering options: -bp~ bandpass filter
+-lop~ low-pass cut-off frequency filter -hip~ high-pass cut-off frequency
+filter please manipulate the slider to set the intended value for each
+of the filters;
+#X coords 0 471 1 470 300 200 0;

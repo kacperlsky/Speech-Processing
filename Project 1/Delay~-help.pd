@@ -1,0 +1,6 @@
+#N canvas 911 102 983 732 12;
+#X obj 6 4 Delay~;
+#X text 10 120 Technical: -Inputs: "r~ freqshift" -Outputs: "s~ delay"
+this module allows to set the delay which is the repetition of the
+main signal after the set amount of time 1000=1second \, 500=0.5 second.
+;

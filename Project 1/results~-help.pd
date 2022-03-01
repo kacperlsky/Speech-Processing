@@ -1,0 +1,5 @@
+#N canvas 0 50 772 509 12;
+#X obj 11 9 results~;
+#X text 14 246 This module allows to see the final output soundwave
+and hear it. The only setting can be made is turning it on and off
+;

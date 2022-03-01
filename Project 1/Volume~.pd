@@ -1,0 +1,24 @@
+#N canvas 0 50 450 300 12;
+#X obj 42 220 s~ Volume;
+#X obj 41 59 r~ flanger;
+#X obj 42 167 *~;
+#X obj 112 155 hsl 220 15 0 100 0 0 empty empty empty -2 -8 0 10 -204800
+-1 -1 6600 1;
+#X obj 127 206 / 100;
+#X floatatom 344 155 5 0 0 0 - - -;
+#X text 203 115 Volume;
+#X obj 309 118 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113
+-1 -1;
+#X text 331 116 <= Reset;
+#X msg 232 58 75;
+#X obj 269 36 loadbang;
+#X text 385 156 %;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 5 0;
+#X connect 4 0 2 1;
+#X connect 5 0 4 0;
+#X connect 7 0 9 0;
+#X connect 9 0 3 0;
+#X connect 10 0 9 0;
+#X coords 0 -1 1 1 300 100 2 100 100;

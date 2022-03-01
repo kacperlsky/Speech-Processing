@@ -1,0 +1,6 @@
+#N canvas 0 50 840 447 12;
+#X obj 15 14 Volume~;
+#X text 345 24 Volume This simpe abstraction allows to set the volume
+of the whole sound flow. With the slider you can increase or decrease
+the volume \, after clicking the reset button the volume will be set
+to 75%;

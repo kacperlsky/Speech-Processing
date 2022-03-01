@@ -1,0 +1,9 @@
+#N canvas 1107 194 689 635 12;
+#X obj 12 10 LFO~;
+#X text 11 175 There are 2 sliders \, one vradio \, reset button which
+can be used to change the Low Frequency Oscillator's parameters Technical:
+Inputs: -no inputs Outputs: -"s~ LFO" it is a continuous output created
+from the oscillator -"s depthoutput" it is an aoutput with the values
+from the depth slider. by clicking the vradio oscillators wave shape
+can change from the sin to the square one.;
+#X coords 0 635 1 634 300 150 0;

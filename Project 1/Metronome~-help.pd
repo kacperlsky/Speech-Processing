@@ -1,0 +1,8 @@
+#N canvas 0 50 832 413 12;
+#X obj 15 26 Metronome~;
+#X text 337 38 Metronome is a device helping to keep the rate of the
+sounds \, used very often by the musicians. With the slider ou can
+set the frequency of the bangs \, turn it off and on. There is both
+the visual and audio metronome. It is also possible to go beyond the
+slider values by manipulating the number. Please make sure not to set
+it to 0;
