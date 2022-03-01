@@ -85,3 +85,5 @@ longer hard-wired for speech.wav).
 ## Project 2
 On each stage of the project 1 there were multiple questions asked, which resulted in document creation covering both practical and theoretical aspects of signal processing and speech technology. This report is not published here but can be requested contacting me(ktlodzinski@gmail.com)
 
+Both projects have been submitted as the partial requirement for the COM3502 Speech Processing at the University of Sheffield.
+
